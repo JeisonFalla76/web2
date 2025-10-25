@@ -1,0 +1,350 @@
+/* ==============================
+   web2.css - GYS IMPORTPLAST
+   Estilo moderno y tecnológico
+   ============================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+:root {
+  --azul-oscuro: #0b132b;
+  --azul-medio: #1c2541;
+  --azul-claro: #3a506b;
+  --verde-agua: #5bc0be;
+  --gris-claro: #f1f1f1;
+  --blanco: #fff;
+}
+
+body {
+  font-family: 'Montserrat', system-ui, sans-serif;
+  color: var(--blanco);
+  background-color: var(--azul-oscuro);
+  overflow-x: hidden;
+  line-height: 1.6;
+}
+
+/* ==============================
+   NAVBAR
+   ============================== */
+header {
+  background: rgba(12, 18, 43, 0.9);
+  backdrop-filter: blur(6px);
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+}
+
+.navbar {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+}
+
+.logo {
+  font-weight: 700;
+  font-size: 1.4rem;
+  color: var(--verde-agua);
+  letter-spacing: 1px;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 1.5rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--blanco);
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: var(--verde-agua);
+}
+
+/* Botón menú (móviles) */
+.hamburguesa {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.hamburguesa span {
+  width: 25px;
+  height: 3px;
+  background: var(--blanco);
+  border-radius: 3px;
+  transition: 0.3s;
+}
+
+/* ==============================
+   HERO / INICIO
+   ============================== */
+#inicio {
+  background: linear-gradient(rgba(11,19,43,0.7), rgba(11,19,43,0.7)),
+              url("imagenes/imagen1.jpg") center/cover no-repeat fixed;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 2rem;
+  position: relative;
+}
+
+#inicio .contenido {
+  max-width: 750px;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+#inicio h1 {
+  font-size: 2.8rem;
+  color: var(--verde-agua);
+  margin-bottom: 1rem;
+  letter-spacing: 1px;
+}
+
+#inicio p {
+  color: #e0e0e0;
+  margin-bottom: 2rem;
+  font-size: 1.1rem;
+}
+
+.boton {
+  display: inline-block;
+  background: var(--verde-agua);
+  color: var(--azul-oscuro);
+  padding: 0.8rem 1.6rem;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s ease;
+}
+
+.boton:hover {
+  background: var(--blanco);
+  transform: translateY(-2px);
+}
+
+/* ==============================
+   CATÁLOGO DE PRODUCTOS
+   ============================== */
+#catalogo {
+  background: var(--azul-medio);
+  padding: 5rem 2rem;
+  text-align: center;
+}
+
+#catalogo h2 {
+  color: var(--verde-agua);
+  font-size: 2.2rem;
+  margin-bottom: 2rem;
+}
+
+.productos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.producto {
+  background: var(--azul-claro);
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  transition: 0.3s;
+}
+
+.producto:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+}
+
+.producto img {
+  width: 100%;
+  height: 220px;
+  border-radius: 10px;
+  object-fit: cover;
+  margin-bottom: 1rem;
+}
+
+.precio {
+  color: var(--verde-agua);
+  font-weight: 600;
+}
+
+/* ==============================
+   DETALLE DEL PRODUCTO
+   ============================== */
+#detalle {
+  background: var(--azul-oscuro);
+  padding: 5rem 2rem;
+}
+
+.detalle-producto {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  align-items: center;
+}
+
+.detalle-producto img {
+  width: 380px;
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.4);
+}
+
+.texto-detalle {
+  max-width: 480px;
+}
+
+.texto-detalle h2 {
+  color: var(--verde-agua);
+  margin-bottom: 1rem;
+}
+
+.texto-detalle li {
+  list-style: none;
+  margin: 0.6rem 0;
+  color: #d9d9d9;
+}
+
+/* ==============================
+   FORMULARIOS / CONTACTO / ENCUESTA
+   ============================== */
+.formulario {
+  max-width: 480px;
+  margin: 0 auto;
+  background: var(--azul-claro);
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+}
+
+.formulario label {
+  display: block;
+  margin-top: 1rem;
+  font-weight: 600;
+}
+
+.formulario input,
+.formulario textarea,
+.formulario select {
+  width: 100%;
+  margin-top: 0.4rem;
+  padding: 0.8rem;
+  border-radius: 8px;
+  border: none;
+  background: #f7f9fa;
+  font-size: 1rem;
+  color: #333;
+}
+
+.formulario button {
+  margin-top: 1.5rem;
+  width: 100%;
+  cursor: pointer;
+}
+
+.boton-wsp {
+  display: inline-block;
+  margin-top: 1.5rem;
+  background: var(--verde-agua);
+  color: var(--azul-oscuro);
+  padding: 0.8rem 1.4rem;
+  border-radius: 25px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.boton-wsp:hover {
+  background: var(--blanco);
+}
+
+/* ==============================
+   FOOTER
+   ============================== */
+footer {
+  text-align: center;
+  background: #081029;
+  color: #ccc;
+  padding: 1rem;
+  font-size: 0.9rem;
+}
+
+/* ==============================
+   BOTÓN FLOTANTE WHATSAPP
+   ============================== */
+.wsp-flotante {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: var(--verde-agua);
+  color: var(--azul-oscuro);
+  font-size: 1.6rem;
+  border-radius: 50%;
+  padding: 0.8rem 1rem;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.3);
+  transition: 0.3s;
+  text-decoration: none;
+  z-index: 999;
+}
+
+.wsp-flotante:hover {
+  transform: scale(1.1);
+  background: var(--blanco);
+}
+
+/* ==============================
+   ANIMACIONES
+   ============================== */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ==============================
+   RESPONSIVE
+   ============================== */
+@media (max-width: 900px) {
+  #inicio h1 { font-size: 2.2rem; }
+  .detalle-producto { flex-direction: column; text-align: center; }
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    position: absolute;
+    background: rgba(28,37,65,0.95);
+    top: 70px;
+    right: 0;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    padding: 1rem 0;
+  }
+
+  .nav-links.show { display: flex; }
+  .hamburguesa { display: flex; }
+}
+
+@media (max-width: 480px) {
+  #inicio { padding: 1rem; height: 90vh; }
+  #inicio h1 { font-size: 1.8rem; }
+  .formulario { padding: 1.2rem; }
+}
